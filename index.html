@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+	<html lang="en">
+	<head>
+	   <meta charset="UTF-8">
+	   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+	   <title>Resume Generator</title>
+	<link href="css.css" rel="stylesheet">
+	</head>
+	<body class="p-5">
+		<!--here goes html code--->
+		<div class="container" id="cv-form">
+			<h1 class="text-center my-2">Resume Generator</h1>
+			<p class="text-center">Created by Miss Prerna</p>
+			<div class="row">
+				<div class="col-md-6"><!--first column--->
+					<div class="p-3">
+						<div class="form-group">
+							<h3>Personal Information</h3>
+							<label fro="nameFeild">Your Name:</label>
+							<input type="text"
+							 id="nameFeild" 
+							 placeholder="Enter here" 
+							 class="form-control">
+						</div>
+						<div class="form-group">
+							<label fro="contactFeild">Your Contact Number:</label>
+							<input type="text"
+							 id="contactFeild" 
+							 placeholder="Enter here" 
+							 class="form-control">
+						</div>
+						<div class="form-group mt-2">
+							<label fro="addressFeild">Your Address:</label>
+							<textarea
+							 type="text"
+							 id="addressFeild" 
+							 placeholder="Enter here" 
+							 class="form-control"></textarea>
+						</div>
+						<p class="text-secondary my-3">Important Links</p>
+						<div class="form-group">
+							<label for="fbFeild">Facebook Link:</label>
+							<input type="text"
+								 id="fbFeild" 
+							 placeholder="Enter here" 
+							 class="form-control">
+						</div>
+					  <div class="form-group">
+						  <label for="instaFeild">Instagram Link</label>
+						  <input type="text"
+							 id="instaFeild" 
+							 placeholder="Enter here" 
+							 class="form-control">
+					  </div>
+					  <div class="form-group">
+						  <label for="linkedFeild">Linkedin Link:</label>
+						  <input type="text"
+							 id="linkedFeild" 
+							 placeholder="Enter here" 
+							 class="form-control">
+					  </div>
+					</div><!--end-Personal-info-->
+				</div>
+				<div class="col-md-6">
+					<div class="p-3">
+						<h2>Professional Information</h2>
+						<div class="form-group mt-2">
+							<label for="addressFeild">Objective:</label>
+							<textarea
+								 id="objectiveFeild"
+								 placeholder="Enter here" 
+								 class="form-control"
+								 rows="5">
+							</textarea>
+						    <div class="form-group mt-2" id="we">
+								<label for="">Work Experience:</label>
+							    <textarea
+								id="ex1"
+								 placeholder="Enter here" 
+								 class="form-control we "
+								 rows="3">
+							 </textarea>
+							 <br>
+							 
+							 <div id="BoxC" style="display:none;">
+							 <textarea
+								id="ex2"
+								 placeholder="Enter here" 
+								 class="form-control we"
+								 rows="3">
+							 </textarea>
+							 </div>
+							  <!--new text area--->
+								<div class="container text-center mt-3" id="btn weAddButton">
+									<button onclick="addNewWEFeild(BoxC)" class="btn btn-primary btn-sm">Add</button>
+								</div>
+							</div><!--end-info-->
+							<div class="form-group mt-2" id="aq">
+								<label for="">Academic Qualification:</label>
+							    <textarea
+								id="q1"
+								 placeholder="Enter here" 
+								 class="form-control aqFeild"
+								 rows="3">
+							 </textarea>
+							 <br>
+							 <div id="ee" style="display:none;">
+							 <textarea
+								id="q2"
+								 placeholder="Enter here" 
+								 class="form-control we"
+								 rows="3">
+							 </textarea>
+							 </div>
+							 <!--new text area--->
+								<div class="container text-center mt-3" id="btn aqAddButton">
+									<button onclick="addNewAQFeild(ee)" class="btn btn-primary btn-sm">Add</button>
+								</div>
+							</div><!--end-info-->
+						</div><!--end-2nd-column-->
+					</div><!--end--row-->
+					</div>
+					<div class="container text-center mt-3">
+					<button onclick="generateCV(cvR)" class="btn btn-primary btn-lg">Generate CV</button>
+					<div id="cvR" class="p-5">
+						
+					</div>
+				</div>
+			<script src="custom.js">    
+			</script>
+		</body>
+	</html>
